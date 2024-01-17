@@ -1,10 +1,19 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Friends
+
 
 
 def index(request):
 
-    params={"name":"しもつ"}
+
+    data=Friends.objects.all()
     
-    return render(request,"blog/index.html",params)
+    params={
+        'title':"hello",
+        'mesagge':"all friends",
+        'data':data,
+    }
+    
+    
+    return render(request,'blog/index.html',params)

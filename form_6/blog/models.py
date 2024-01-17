@@ -17,7 +17,7 @@ class Friends(models.Model):
     
     
     
-    age=models.IntegerField(defalt=0)
+    age=models.IntegerField(default=0)
     
     
     
